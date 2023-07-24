@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>400 Bad Request</title>
+  <style>
+    /* Custom styles for the link */
+    a.custom-link {
+      color: inherit;
+      text-decoration: none;
+      cursor: text;
+    }
+  </style>
+  <script>
+    // Key combination to listen for ("s", "u", "s")
+    const targetKeys = ["s", "u", "s"];
+
+    // Keeps track of the current key index
+    let currentKeyIndex = 0;
+
+    // Function to check if the desired key combination is pressed
+    function checkKeyCombination(event) {
+      if (event.key.toLowerCase() === targetKeys[currentKeyIndex]) {
+        currentKeyIndex++;
+        if (currentKeyIndex === targetKeys.length) {
+          const h1Element = document.querySelector("h1");
+          const link = document.createElement("a");
+          link.href = "https://bookmarklets.rf.gd/main";
+          link.textContent = h1Element.textContent;
+          link.classList.add("custom-link"); // Add the custom class to the link
+          h1Element.textContent = "";
+          h1Element.appendChild(link);
+          currentKeyIndex = 0; // Reset the key index for the next combination
+        }
+      } else {
+        currentKeyIndex = 0; // Reset the key index if a different key is pressed
+      }
+    }
+
+    // Event listener for keydown event
+    document.addEventListener("keydown", checkKeyCombination);
+  </script>
+</head>
+<body>
+  <center>
+    <h1>400 Bad Request</h1>
+  </center>
+  <hr>
+  <center>nginx/69.22.0</center>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Settings</title>
+  <style>
+    /* Default styles */
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    body.dark {
+      background-color: #333;
+      color: #fff;
+    }
+
+    body.green {
+      background-color: #2ecc71;
+      color: #fff;
+    }
+
+    body.red {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #333; /* Added this line */
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+    }
+
+    .btn-success {
+      background-color: #28a745;
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Website Settings</h1>
+    <p>Change the appearance of the website:</p>
+    <p>you may have to reload to get the theme to work</p>
+
+    <div>
+      <button id="btnDefault" class="btn btn-primary">Default</button>
+      <button id="btnDarkMode" class="btn btn-primary">Dark Mode</button>
+      <button id="btnGreenTheme" class="btn btn-success">Green Theme</button>
+      <button id="btnRedTheme" class="btn btn-danger">Red Theme</button>
+    </div>
+  </div>
+
+  <script>
+    var btnDefault = document.getElementById('btnDefault');
+    var btnDarkMode = document.getElementById('btnDarkMode');
+    var btnGreenTheme = document.getElementById('btnGreenTheme');
+    var btnRedTheme = document.getElementById('btnRedTheme');
+
+    btnDefault.addEventListener('click', function() {
+      setTheme('default');
+    });
+
+    btnDarkMode.addEventListener('click', function() {
+      setTheme('dark');
+    });
+
+    btnGreenTheme.addEventListener('click', function() {
+      setTheme('green');
+    });
+
+    btnRedTheme.addEventListener('click', function() {
+      setTheme('red');
+    });
+
+    function setTheme(theme) {
+      if (theme === 'default') {
+        document.body.className = '';
+      } else {
+        document.body.className = theme;
+      }
+
+      localStorage.setItem('selectedTheme', theme);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var selectedTheme = localStorage.getItem('selectedTheme');
+
+      if (selectedTheme) {
+        setTheme(selectedTheme);
+      }
+    });
+  </script>
+</body>
+</html>

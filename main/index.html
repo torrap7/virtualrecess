@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="cloak.js"></script>
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: var(--text-color);
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-image {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        button,
+        .abcButton {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        button[type="submit"],
+        .bookmarkletButton {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            width: 120px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .bookmarkletButton {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #f5f5f5;
+            color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <title>DreamBox</title>
+    <link rel="icon" type="image/x-icon" href="https://media.glassdoor.com/sqll/382624/dreambox-learning-squareLogo-1663359312304.png">
+    <script>
+        var clickCount = 0;
+
+        var titles = ["lanschool sucks", "make the internet free again", "get help with your math homework here1!1!!!", "don't care + didn't ask + cry about it + stay mad + get real + L + mald seethe cope harder +  skill issue + ratio + you fell off + the audacity + triggered + any askers + bluepilled + get a life + ok and? + cringe + touch grass + donowalled + not based + basic + not funny didn't laugh + you're* + grammar issue + go outside + get good + reported +  GG!", "<h1>header</h1>"];
+
+
+        function setTheme(theme) {
+            if (theme === 'default') {
+                document.documentElement.style.backgroundColor = '#f5f5f5';
+                document.documentElement.style.setProperty('--text-color', '#333');
+            } else if (theme === 'dark') {
+                document.documentElement.style.backgroundColor = '#333';
+                document.documentElement.style.setProperty('--text-color', '#fff');
+            } else if (theme === 'green') {
+                document.documentElement.style.backgroundColor = '#2ecc71';
+                document.documentElement.style.setProperty('--text-color', '#fff');
+            } else if (theme === 'red') {
+                document.documentElement.style.backgroundColor = '#e74c3c';
+                document.documentElement.style.setProperty('--text-color', '#fff');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var selectedTheme = localStorage.getItem('selectedTheme');
+            if (selectedTheme) {
+                setTheme(selectedTheme);
+            }
+        });
+
+        if (!sessionStorage.getItem('reloaded')) {
+            sessionStorage.setItem('reloaded', true);
+        }
+
+        function selectTheme(theme) {
+            setTheme(theme);
+            localStorage.setItem('selectedTheme', theme);
+        }
+
+        function incrementClickCount() {
+            clickCount++;
+            if (clickCount === 3) {
+                document.getElementById('passwordForm2').style.display = 'none';
+                document.getElementById('buttonContainer').style.display = 'block';
+            }
+        }
+
+        function checkPassword2() {
+            var password = document.getElementById('passwordInput2').value;
+            if (password === '4536') {
+                alert("This doesn't work anymore, ask me for the new method");
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+
+        function navigate(url) {
+            window.location.href = url;
+        }
+
+        function keyboardShortcuts() {
+            var titleIndex = Math.floor(Math.random() * titles.length);
+            document.title = titles[titleIndex];
+        }
+
+        function checkClickCount() {
+            incrementClickCount();
+            if (clickCount === 3) {
+                document.getElementById('passwordInput2').value = '';
+                document.getElementById('passwordForm2').style.display = 'none';
+                document.getElementById('buttonContainer').style.display = 'block';
+            }
+        }
+    </script>
+</head>
+    <div class="header-container">
+        <h1 id="titles"></h1>
+        <a href="#" onclick="incrementClickCount(); return false;">
+            <img src="https://i.ibb.co/C7F1SBv/image.png" class="header-image">
+        </a>
+    </div>
+
+    <p>Enter password to enter the developer panel</p>
+    <form id="passwordForm">
+        <input type="password" id="passwordInput" placeholder="Password" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="linkContainer" style="display: none;">
+        <form id="passwordForm2" onsubmit="checkPassword2(); return false;">
+            <input type="password" id="passwordInput2" placeholder="Password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="buttonContainer" style="display: none;">
+        <button onclick="navigate('https://bookmarklets.rf.gd/bookmarklets')" class="bookmarkletButton">Bookmarklets</button>
+        <button onclick="navigate('https://bookmarklets.rf.gd/games')" class="bookmarkletButton">Games</button>
+        <button onclick="navigate('https://bookmarklets.rf.gd/misc')" class="bookmarkletButton">Misc</button>
+        <button onclick="navigate('https://bookmarklets.rf.gd/settings')" class="bookmarkletButton">Settings</button>
+    </div>
+
+    <button class="abcButton" id="blankbtn" onclick="blank()">Open in about:blank</button>
+
+    <footer style="background-color: #242424; color: #f5f5f5;">
+        <span onclick="checkClickCount()">&copy;</span> 2023 StudyRecess. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Selection</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .button {
+  appearance: button;
+  background-color: #4D4D4D;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 5px 16px;
+  text-align: left;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.button:after {
+  background-clip: padding-box;
+  background-color: #808080;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button:main,
+.button:focus {
+  user-select: auto;
+}
+
+.button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button:disabled {
+  cursor: auto;
+}
+    </style>
+    <script>
+        "use strict";
+        window.addEventListener('load', function() {
+            var selectedFavicon = localStorage.getItem('selectedFavicon');
+            var selectedTitle = localStorage.getItem('selectedTitle');
+
+            if (selectedFavicon) {
+                document.querySelector("link[rel='icon']").href = selectedFavicon;
+            }
+            if (selectedTitle) {
+                document.title = selectedTitle;
+            }
+        });
+
+        window.OfflineClientInfo = new class {
+            constructor() {
+                if (typeof BroadcastChannel === 'undefined') {
+                    this._broadcastChannel = null;
+                } else {
+                    this._broadcastChannel = new BroadcastChannel('offline');
+                    this._broadcastChannel.onmessage = (message) => this._OnBroadcastChannelMessage(message);
+                }
+                this._queuedMessages = [];
+                this._onMessageCallback = null;
+            }
+
+            _OnBroadcastChannelMessage(message) {
+                if (this._onMessageCallback) {
+                    this._onMessageCallback(message);
+                } else {
+                    this._queuedMessages.push(message);
+                }
+            }
+
+            SetMessageCallback(callback) {
+                this._onMessageCallback = callback;
+                for (let message of this._queuedMessages) {
+                    this._onMessageCallback(message);
+                }
+                this._queuedMessages.length = 0;
+            }
+        };
+    </script>
+</head>
+<body>
+    <button class="button" onclick="window.location.href='https://bookmarklets.rf.gd/games/hostedhere/pseudo3dracer';">Pseudo 3D Racer</button>
+    <button class="button" onclick="window.location.href='https://bookmarklets.rf.gd/games/hostedhere/bigtowertinysquare';">Big Tower Tiny Square</button>
+    <script>
+        window.OfflineClientInfo.SetMessageCallback(function(message) {
+            console.log('Received message from offline client:', message);
+        });
+        function setSelectedFavicon(favicon) {
+            document.querySelector("link[rel='icon']").href = favicon;
+            localStorage.setItem('selectedFavicon', favicon);
+        }
+
+        function setSelectedTitle(title) {
+            document.title = title;
+            localStorage.setItem('selectedTitle', title);
+        }
+    </script>
+</body>
+</html>

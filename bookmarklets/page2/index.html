@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+            body {
+            font-family: Arial, sans-serif;
+        }
+        </style>
+        </head>
+        <body>
+            <h1>Welcome to the cooler bookmarklets page.</h2>
+            <h2>I am not responsible for any damage caused, or trouble you get in from using these.</h2>
+            <!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+        }
+        input[type="text"].invisible-textbox {
+  border: none;
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: not-allowed;
+}
+
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    .invisible-textbox {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .button {
+      display: block;
+      flex-direction: column;
+    align-items: flex-start;
+      text-align: left;
+       margin-bottom: 4px;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+</style>
+
+<style>
+  .container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+  }
+
+  .content {
+    flex: 1;
+    text-align: left;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="buttons">
+      <input type="text" class="invisible-textbox" value="javascript:(function () {if (window.location.toString().includes('www.youtube.com/watch?v%27)) { window.open(%27https://www.youtube-nocookie.com/embed/%27 + window.location.toString().split(%27=%27)[1]) }})()" id="myInput1">
+      <button class="button" onclick="copyText('myInput1')"><span>YouTube Unblocker</span></button>
+
+      <input type="text" class="invisible-textbox" value="javascript:document. body. contentEditable = 'true'; document. designMode='on'; void 0." id="myInput2">
+
+<button class="button" onclick="copyText('myInput2')"><span>Turn Page Edit On</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:document. body. contentEditable = 'false'; document. designMode='off'; void 0." id="myInput3">
+
+<button class="button" onclick="copyText('myInput3')"><span>Turn Page Edit Off</span></button>
+
+<input type="text" class="invisible-textbox" value='javascript:(function () { var script = document.createElement("script"); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();' id="myInput4">
+
+<button class="button" onclick="copyText('myInput4')"><span>Inspect Element</span></button>
+
+<input type="text" class="invisible-textbox" value='javascript:(function()%7Bvar num%3Dprompt("How Times Do You Want This Page To Show Up In your History%3F")%3Bdone%3Dfalse%3Bx%3Dwindow.location.href%3Bfor (var i%3D1%3B i<%3Dnum%3B i%2B%2B)%7Bhistory.pushState(0%2C 0%2C i%3D%3Dnum%3Fx%3Ai.toString())%3Bif(i%3D%3Dnum)%7Bdone%3Dtrue%7D%7Dif(done%3D%3D%3Dtrue)%7Balert("History Flooding Successful!%5Cn "%2Bwindow.location.href%2B" %5CnNow Appears In Your History "%2Bnum%2B(num%3D%3D1%3F" time."%3A" Times. %5CnMade By%3A Utopia"))%7D%7D)()%3B'
+ id="myInput5">
+
+<button class="button" onclick="copyText('myInput5')"><span>History Flooder</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function(){    /* Ad-B-Gone: The simple bookmarklet that removes ads from web pages! Made by 3kh0. */    var selectors = [    /* By ID: */    '#sidebar-wrap', '#advert', '#xrail', '#middle-article-advert-container',    '#sponsored-recommendations', '#around-the-web', '#sponsored-recommendations',    '#taboola-content', '#taboola-below-taboola-native-thumbnails', '#inarticle_wrapper_div',    '#rc-row-container', '#ads', '#at-share-dock', '#at4-share', '#at4-follow', '#right-ads-rail',    'div#ad-interstitial', 'div#advert-article', 'div#ac-lre-player-ph',    /* By Class: */    '.ad', '.avert', '.avert__wrapper', '.middle-banner-ad', '.advertisement',    '.GoogleActiveViewClass', '.advert', '.cns-ads-stage', '.teads-inread', '.ad-banner',    '.ad-anchored', '.js_shelf_ads', '.ad-slot', '.antenna', '.xrail-content',    '.advertisement__leaderboard', '.ad-leaderboard', '.trc_rbox_outer', '.ks-recommended',    '.article-da', 'div.sponsored-stories-component', 'div.addthis-smartlayers',    'div.article-adsponsor', 'div.signin-prompt', 'div.article-bumper', 'div.video-placeholder',    'div.top-ad-container', 'div.header-ad', 'div.ad-unit', 'div.demo-block', 'div.OUTBRAIN',    'div.ob-widget', 'div.nwsrm-wrapper', 'div.announcementBar', 'div.partner-resources-block',    'div.arrow-down', 'div.m-ad', 'div.story-interrupt', 'div.taboola-recommended',    'div.ad-cluster-container', 'div.ctx-sidebar', 'div.incognito-modal', '.OUTBRAIN', '.subscribe-button',    '.ads9', '.leaderboards', '.GoogleActiveViewElement', '.mpu-container', '.ad-300x600', '.tf-ad-block',    '.sidebar-ads-holder-top', '.ads-one', '.FullPageModal__scroller',    '.content-ads-holder', '.widget-area', '.social-buttons', '.ac-player-ph',    /* Other: */    'script', 'iframe', 'video', 'aside#sponsored-recommendations', 'aside[role='banner']', 'aside',    'amp-ad', 'span[id^=ad_is_]', 'div[class*='indianapolis-optin']', 'div[id^=google_ads_iframe]',    'div[data-google-query-id]', 'section[data-response]', 'ins.adsbygoogle', 'div[data-google-query-id]',    'div[data-test-id='fullPageSignupModal']', 'div[data-test-id='giftWrap']' ];    for(let i in selectors) {        let nodesList = document.querySelectorAll(selectors[i]);        for(let i = 0; i < nodesList.length; i++) {            let el = nodesList[i];            if(el && el.parentNode)                el.parentNode.removeChild(el);        }    }})();"
+ id="myInput6">
+
+<button class="button" onclick="copyText('myInput6')"><span>Ad Remover</span></button>
+
+
+<input type="text" class="invisible-textbox" value='javascript:krazete:function initDash(){var e,t=document.createElement("div"),n=(t.style.position="fixed",t.style.right="0",t.style.bottom="0",t.style.zIndex="4999",document.createElement("div")),n=(n.innerHTML="❌",n.addEventListener("click",function(){t.remove()}),t.appendChild(n),document.createElement("input")),i=(n.type="range",n.min=0,n.max=1,n.step=.1,n.value=.7,n.addEventListener("input",function(){document.getElementsByTagName("video")[0].style.filter="brightness("+this.value+")"}),t.appendChild(n),document.createElement("div"));for(e of[1,2,3,5,10]){var a=document.createElement("button");a.value=e,a.innerHTML="x"+e,i.appendChild(a)}i.addEventListener("click",function(e){document.getElementsByTagName("video")[0].playbackRate=parseInt(e.target.value)}),t.appendChild(i),document.body.appendChild(t)}initDash();'
+ id="myInput8">
+
+<button class="button" onclick="copyText('myInput7')"><span>Video Speed Changer</span></button>
+
+<input type="text" class="invisible-textbox" value='javascript:function getParameterByName(e,n=window.location.href){e=e.replace(/[\[\]]/g,"\$&");var t=new RegExp("[?&]"+e+"(=([^&#]*)|&|#|$)").exec(n);return t?t[2]?decodeURIComponent(t[2].replace(/\+/g," ")):"":null}var id=getParameterByName("v");null!=id&&window.open("https://youtube-comments-fetcher.uniqueostrich18.repl.co/redirect?path=comments&id="+id);'
+ id="myInput9">
+
+<button class="button" onclick="copyText('myInput8')"><span>YouTube Comment Viewer</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function () {var script=document.createElement('script');script.src='https://x-ray-goggles.mouse.org/webxray.js';script.className='webxray';script.setAttribute('data-lang','en-US');script.setAttribute('data-baseuri','https://x-ray-goggles.mouse.org');document.body.appendChild(script);}())"
+ id="myInput10">
+
+<button class="button" onclick="copyText('myInput9')"><span>Webpage X-ray Goggles</span></button>
+
+  </body>
+
+
+
+<script>
+  function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+  }
+</script>
+</body>
+</html>
+ 

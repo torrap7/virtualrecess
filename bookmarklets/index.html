@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+        }
+        input[type="text"].invisible-textbox {
+  border: none;
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: not-allowed;
+}
+
+    .button-container2 {
+        text-align: center;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background-color: #c2c2c2;
+    }
+    .invisible-textbox {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .button {
+      display: block;
+      flex-direction: column;
+    align-items: flex-start;
+      text-align: left;
+       margin-bottom: 4px;
+  }
+ .button2 {
+      background-color: #949494;
+      display: inline-block;
+       margin-bottom: 4px;
+       text-align: center;
+       margin: 0 16px;
+       flex-direction: row;
+    }
+
+  h1,
+  h2,
+  h3,
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+  }
+  .content {
+    flex: 1;
+    text-align: left;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="buttons">
+      <input type="text" class="invisible-textbox" value="javascript:(function(){var s=document.createElement('style');s.innerHTML='%40-moz-keyframes roll { 100%25 { -moz-transform: rotate(129600deg); } } %40-o-keyframes roll { 100%25 { -o-transform: rotate(129600deg); } } %40-webkit-keyframes roll { 100%25 { -webkit-transform: rotate(129600deg); } } body{ -moz-animation-name: roll; -moz-animation-duration: 1440s; -moz-animation-iteration-count: 360; -o-animation-name: roll; -o-animation-duration: 1440s; -o-animation-iteration-count: 360; -webkit-animation-name: roll; -webkit-animation-duration: 1440s; -webkit-animation-iteration-count: 360; }';document.head.appendChild(s);}());" id="myInput1">
+      <button class="button" onclick="copyText('myInput1')"><span>Infinite Spin</span></button>
+      <input type="text" class="invisible-textbox" value='javascript:(function(){var js=document.body.appendChild(document.createElement("script"));js.onerror=function(){alert("Sorry, the script could not be loaded.")};js.src="https://rawgit.com/Krazete/bookmarklets/master/tri.js"})();' id="myInput2">
+
+<button class="button" onclick="copyText('myInput2')"><span>3D Webpage</span></button>
+
+<input type="text" class="invisible-textbox" value='javascript:var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.createTemplateTagFirstArg=function(a){return a.raw=a};$jscomp.createTemplateTagFirstArgWithRaw=function(a,b){a.raw=b;return a};var incrementingNum=0,colors="red orange yellow green blue purple pink".split(" ");setInterval(function(){6<=incrementingNum?incrementingNum=0:incrementingNum++;for(var a=document.querySelectorAll("div"),b=0;b<a.length;b++)a[b].style.backgroundColor=colors[incrementingNum],a[b].style.transition="background-color 1s"},1E3);try{var audio=document.createElement("audio");audio.src="http://soundbible.com/mp3/Fart-Common-Everyday-Fart_Mike-Koenig.mp3";audio.loop=!0;audio.play()}catch(a){console.log("Unable to play audio.")}var css="\nhtml, body {\n\tcursor: url(%27data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8C////Av///wL///8C////Av///wL///8C////Av///wLZ7vH/2u/z/////wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wL///8C////Av///wL///8C////Ah1wdf8ncnz/O217/ypwff8tc4D/JnN8/zJwcv////8C////Av///wL///8C////Av///wL///8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8C////Av///wL///8C////Av///wI0eoT/K32F/y10fv8qcXv/LnB7/ytteP8sdn7/O4yT/zR6ff////8C////Av///wL///8C////Av///wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8C////Av///wL///8CJ3qA/y1/h/8xeYP/J254/ypxe/8xeIL/KXB6/ydkbv8oYGv/KHJ4/zKQjv////8C////Av///wL///8C////Av///wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wL///8C////Aj5xdf8ueYH/L3mF/yp5gv8yf5D/NXqM/yZykP8kcI3/L3eI/zhwdv8teXb/MIOE/z2RjP////8C////Av///wL///8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8C////Av///wL///8CL32H/y+BhP8zhIn/MH+c/1yZy/9co8f/T5y4/02atv9jr9P/orTe/zmOk/86mJj/NZ+a/zSMh/////8C////Av///wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8C////Aj2Dif8ugIX/L4GG/y5+l/9jo9f/AAkS/0E8ef9ARYP/RkyW/1ZTk/8PIlT/Zrbe/zOfmv85naH/Oa2n/0h/fv////8C////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wL///8CKnh//zKDiP87jJH/XaTZ/wMKCP9MUY7/R1SH/0RIff9JS3P/OUVs/zo6Zv8AAgb/fbjv/zamp/82rK7/LbKp/////wL///8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8C////Ajx/gP83iY//L3+H/yx8lP8qUXX/IBwp/x4jMv8VFyH/EhEN/xYPGP8WDxT/GQ8R/w0GAP8RJSv/MZqq/zKnq/8zt7v/uN3Z/////wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8CKoSI/ziMl/80hYz/PYmv/wcHAf8SFRr/GSQ0/wgcJ/9vlq3/g6ix/7Pd8P9oj57/UXqM/y8tPv88dZj/PrG2/zSst/9sqqX/////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wI0h4n/MoqP/y2EjP9MjrT/ESMg/yVDY/8lT2v/V5ai/0tujf8jR2b/Hz9x/yBJdP8gbpL/Lai7/zOkqv80pKv/N5eg/ziwqf////8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8C////Aj2Okf8ygYf/LXyD/yJXc/8iNkf/ETRW/xc7Z/8hVX7/XKjD/1DQyv8+yM//T9bk/0XK1P83ws3/MK64/yFoe/81jZf/Hq6j/////wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8CL5WR/yl5gP8YUl//MoKR/zSSlv84q6v/Nrm7/ze1s/8zoKT/JmBt/yNecf87m6z/PLrI/zG2x/8ukZ3/J15u/ziepv8/q6v/////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wI0jov/L4aL/yxve/8ZTWH/J2p6/zmKl/8ziZf/J2dz/xc2Pv8fQ0v/Ildt/xpYcf8ZOD7/F1BW/y1wff8xqbP/MLm//0C4t/////8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8C////Av///wIwj5P/MYKK/yZrdf8hW2f/IUxb/x08SP8QIC//MWl0/z+Kpv80nrn/NaG7/zSdof80qq3/SbzH/0TG1P8sxMv/Ks7G/////wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8C////AjKloP81l53/N5mf/zaXof85mKL/IFpm/zR4gv87i5T/Laez/0m1x/9avdH/Mb2//zO3vP89ydD/PdTa/zPh5P810cr/////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wL///8CTKif/ziztP8ys73/LL/K/yjI0v8nv8f/Jo6V/0LBx/85x8//PNXc/z3N0P8HU2L/GTVc/32NpP9rmab/N5+k/////wL///8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8C////Av///wLH+PH/QcTA/z7GzP8tgYn/YnmL/xUUNv+Wv8z/MFJe/z2Wnv87t8L/IW1w/yRMU/8PLDb/ED5J/z6NkP9Bq7D/KKyx/////wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/////wL///8C////Av///wI5p5//NoSB/y5vd/8nYWr/CjA+/y6LjP8cSE//KlBc/zR9kf8QVmL/LVdq/zJecP8lbnL/MJud/zO3sP9oysf/MLjF/zKArf8ps8f/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////Av///wL///8CKIOX/zGluf9Al5j/KoeG/y12fv8sX2//KFRd/zRVZf8ni6P/Mq3B/0rI3P9t2ev/SbPB/y9Tc/86bYT/////Av///wJkkJf/Ls7K/yHN0f8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8qma//HVh3/0egvv9Zu77/////Ake6rv8zlo//PJaX/zyZmv8oen7/H3iQ/z3V6/822Ob/JNPf/zfd5v8n1dj/O8nQ/zbKx/////8C////Av///wJD4PH/////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/zKfsP8tn6//PsjE/////wL///8C////AjGvov8mXHP/MVd5/0Kcuv8i1db/Jtfe/yHb4f8z4+r/M+Dm/yTf4/8/x8//levn/////wL///8C////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////Aiewx/////8C////Av///wL///8CicvJ/zS7tf8yxML/NMLG/yXV2/8p2eT/Nd/t/0Dh8P8x3ej/I93l/xzg1f////8C////Av///wL///8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/////wL///8CftrL/zLKyv8i2db/INfd/yLX4/803u7/K9nk/yLk5P8S3tT/////Av///wL///8C////Av///wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8C////Av///wL///8C////Av///wL///8C////AmnQz/8c18v/QNfU/zHf3f8K5Nb/////Av///wL///8C////Av///wL///8C////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wL///8C////Av///wIAAAAAAAAAAAAAAAAAAAAA//////////////////5////wH///4A///8AH//+AA///gAH//wAA//8AAP/+AAB//gAAf/4AAH/+AAB//gAAf/4AAH//AAB//wAAf/8AAP//AAB/94AAD/cAAY/wQAHf8OAB//XgA//wMAf///wf//////////////////////8=%27), auto;\n}",style=document.createElement("style");style.innerHTML=css;document.head.appendChild(style);css="\n@keyframes roll {\n  100%{\n    transform:rotate(360deg)\n  }\n}\nbody {\n  animation-name: roll;\n  animation-duration: 4s;\n  animation-iteration-count: 1;\n}\n";style=document.createElement("style");style.innerHTML=css;document.head.appendChild(style);' id="myInput3">
+
+<button class="button" onclick="copyText('myInput3')"><span>Troll</span></button>
+
+<input type="text" class="invisible-textbox" value='javascript:Q=64;m=b=Q*Q;a=[P=l=u=d=p=S=w=0];u=89;f=(h=j=t=(b+Q)/2)-1;(B=(D=document).body).appendChild(x=D.createElement("p"));(X=x.style).position="fixed";X.left=X.top=0;X.background="#FFF";x.innerHTML="<p></p><canvas>";v=(s=x.childNodes)[0];(s=s[1]).width=s.height=5*Q;c=s.getContext("2d"); onkeydown=onblur=F=function(e,g){g?a[f]?(w+=m,f=Math.random(l+=8)*(R=Q-2)*R|(u=0),F(f+=Q+1+2*(f/R|0),g)):F(f):0>e?(l?--l:(y=t,t=a[t]-2,F(y)),S+=(w*=0.8)/4,m=999/(u++ +10),a[h+=[-1,-Q,1,Q][d=p]]?B.removeChild(x,alert("Game Over")):(F(h),F(e,j=h),v.innerHTML=P?(setTimeout(F,50,e,0),S|0):"Press P")):-e?(y=(a[e]=e<Q|e>=Q*Q-Q|!(e%Q)|e%Q==Q-1|2*(e==h))+(e==f),e==h&&(a[j]=2+h),c.fillStyle="hsl("+99*!a[e]+","+2*m+"%,"+50*y+"%)",c.fillRect(e%Q*5,5*(e/Q|0),5,5)):isNaN(y=e.keyCode-37)|43==y?(P=y&&!P)&&F(-1): p=!P|y&-4|!(y^2^d)?p:y;return!1};for(;--b;F(b));void F(-1);'
+ id="myInput4">
+
+<button class="button" onclick="copyText('myInput4')"><span>Snake</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:var KICKASSVERSION='2.0';var s = document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';void(0);"
+ id="myInput5">
+
+<button class="button" onclick="copyText('myInput5')"><span>Space Invaders Inside Website</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function() {  var elements = document.getElementsByTagName('*');  for (var i = 0; i < elements.length; i++) { var style = window.getComputedStyle(elements[i]);                                             var currentFont = style.getPropertyValue('font-family');                                             if (currentFont !== 'Comic Sans MS') { elements[i].style.fontFamily = 'Comic Sans MS';                                                                                  }                                            }})();'
+ id="myInput6">
+
+<button class="button" onclick="copyText('myInput6')"><span>Comic Sansify</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function(){window.mcbmRootURI='https://luphoria.com/MCanywhere/';window.mcbmScriptURI='mcbm.min.js';window.mcbmLang='eng';var s,ss=window.mcbmRootURI+'js/mcbm-load.min.js';s=document.createElement('script');s.src=ss;document.body.appendChild(s);})();"
+ id="myInput7">
+
+<button class="button" onclick="copyText('myInput7')"><span>Minecraftify Webpage</span></button>
+
+<input type="text" class="invisible-textbox" value='javascript:for (let i = 0; i < 9999999; i++) {window.alert("you computer has virus1!")};'
+ id="myInput8">
+
+<button class="button" onclick="copyText('myInput8')"><span>Infinite Prompt</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function(){['', '-ms-', '-webkit-', '-o-', '-moz-'].map(function(prefix){Array.prototype.slice.call(document.querySelectorAll('div,p,span,img,a,body')).map(function(el){el.style[prefix + 'transform'] = 'rotate(' + (Math.floor(Math.random() * 3) - 1) + 'deg)';});});}())"
+ id="myInput9">
+
+<button class="button" onclick="copyText('myInput9')"><span>Tilt Webpage Elements</span></button>
+
+<input type="text" class="invisible-textbox" value='javascript:(function(){document.body.style.webkitTransform=document.body.style.MozTransform="rotate(180deg)"}())'
+ id="myInput10">
+
+<button class="button" onclick="copyText('myInput10')"><span>Webpage Flip</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function() {  var images = document.getElementsByTagName('img');  for (var i = 0; i < images.length; i++) {    images[i].src = 'https://cataas.com/cat?timestamp=%27 + Date.now();  }})();"
+ id="myInput11">
+
+<button class="button" onclick="copyText('myInput11')"><span>Replace Image With Cat</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function() {  var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];  var confetti = document.createElement('div');  confetti.style.width = '100%';  confetti.style.height = '100%';  confetti.style.position = 'fixed';  confetti.style.top = '0';  confetti.style.left = '0';  confetti.style.pointerEvents = 'none';  document.body.appendChild(confetti);  for (var i = 0; i < 100; i++) {    var rect = document.createElement('div');    rect.style.width = '10px';    rect.style.height = '10px';    rect.style.background = colors[Math.floor(Math.random() * colors.length)];    rect.style.position = 'absolute';    rect.style.top = Math.random() * 100 + '%';    rect.style.left = Math.random() * 100 + '%';    confetti.appendChild(rect);  }})();"
+ id="myInput12">
+
+<button class="button" onclick="copyText('myInput12')"><span>Confetti</span></button>
+
+<input type="text" class="invisible-textbox" value='javascript:krazete:var inverthtml;void 0===inverthtml?((inverthtml=document.createElement("style")).innerHTML="html{background:black;filter:invert(100%25)}",document.body.appendChild(inverthtml)):(inverthtml.remove(),inverthtml=void 0);'
+ id="myInput13">
+
+<button class="button" onclick="copyText('myInput13')"><span>Invert Color</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function(){var s=document.createElement('style');s.innerHTML='*{background:linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #8F00FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}';document.body.appendChild(s);})();"
+ id="myInput14">
+
+<button class="button" onclick="copyText('myInput14')"><span>Rainbow Text</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function(){var img=document.createElement('img');img.src='https://cataas.com/cat/gif';img.style.position='fixed';img.style.bottom='10px';img.style.right='10px';document.body.appendChild(img);})();"
+ id="myInput15">
+
+<button class="button" onclick="copyText('myInput15')"><span>Cat Gif Miniplayer</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function(){var map={'a':'🅰%EF%B8%8F','b':'🅱%EF%B8%8F','c':'©%EF%B8%8F','d':'🇩','e':'🇪','f':'🇫','g':'🇬','h':'🇭','i':'ℹ%EF%B8%8F','j':'🇯','k':'🇰','l':'🇱','m':'Ⓜ%EF%B8%8F','n':'🇳','o':'🅾%EF%B8%8F','p':'🅿%EF%B8%8F','q':'🇶','r':'®%EF%B8%8F','s':'💲','t':'🇹','u':'🇺','v':'✅','w':'🇼','x':'❎','y':'🇾','z':'💤'};var elements=document.getElementsByTagName('*');for(var i=0;i<elements.length;i++){var element=elements[i];for(var j=0;j<element.childNodes.length;j++){var node=element.childNodes[j];if(node.nodeType===3){var text=node.nodeValue;var emojifiedText='';for(var k=0;k<text.length;k++){var char=text.charAt(k).toLowerCase();emojifiedText+=char in map?map[char]:text.charAt(k);}node.nodeValue=emojifiedText;}}}})();"
+ id="myInput16">
+
+<button class="button" onclick="copyText('myInput16')"><span>Replace Text With Emoji</span></button>
+
+<input type="text" class="invisible-textbox" value="javascript:(function(){    var elements = document.getElementsByTagName('*');    var keyframes = '@keyframes dancify { 0% { transform: rotate(0deg); } 50% { transform: rotate(10deg); } 100% { transform: rotate(0deg); } }';    var styleSheet = document.createElement('style');        styleSheet.type = 'text/css';    styleSheet.innerHTML = keyframes;    document.head.appendChild(styleSheet);        for (var i = 0; i < elements.length; i++) {        elements[i].style.animation = 'dancify 0.5s infinite';        elements[i].style.animationDirection = 'alternate';    }})();"
+ id="myInput17">
+
+<button class="button" onclick="copyText('myInput17')"><span>Webpage Element Dance</span></button>
+
+
+<input type="text" class="invisible-textbox" value="javascript:(function(){    document.addEventListener('mousemove', function(e){        var trail = document.createElement('div');        trail.style.position = 'fixed';        trail.style.left = e.clientX + 'px';        trail.style.top = e.clientY + 'px';        trail.style.width = '10px';        trail.style.height = '10px';        trail.style.borderRadius = '50%';        trail.style.backgroundColor = 'hsl('+ Math.random() * 360 +', 100%, 50%)';        trail.style.pointerEvents = 'none';        trail.style.zIndex = '9999';        document.body.appendChild(trail);    });    document.addEventListener('mouseleave', function(){        var trails = document.querySelectorAll('div[style*=\"pointer-events: none;\"]');        for (var i = 0; i < trails.length; i++) {            trails[i].remove();        }    });})();"
+id="myInput18">
+
+<button class="button" onclick="copyText18('myInput18')">
+  <span>Rainbow Cursor Trail</span>
+</button>
+    </div>
+    <div class="content">
+      <h1>Welcome to my collection of bookmarklets.</h1>
+      <h2>Most of these weren't created by me, so if you see a bookmarklet you made and want credit, please join the Discord and create a ticket.</h2>
+      <br>
+      <h3>Steps on how to add bookmarklets:</h3>
+      <p>
+        Step 1. Click on one of the buttons shown below, it will automatically copy the code to your clipboard.
+      </p>
+      <p>Step 2. Right click on your bookmarks bar.</p>
+      <p>Step 3. Select "Add page..." in the right click menu.</p>
+      <p>Step 4. In the name text box, name it whatever you want. In the URL box, paste the code that was copied to your clipboard.</p>
+      <p>Now, you've finished! On any website, click the bookmark like a normal bookmark, and your bookmarklet should work!</p>
+    </div>
+  </div>
+  <footer>          <div class="button-container2">
+      <button class="button2" onclick="window.location.href='https://bookmarklets.rf.gd/bookmarklets/page2';">More bookmarklets</button>
+    <button class="button2" onclick="window.location.href='https://bookmarklets.rf.gd/bookmarklets/cloaks';">Tab Cloaks</button>
+    </div>
+    </footer>
+  </body>
+
+
+
+<script>
+  function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+  }
+  function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+  }
+  function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+  }
+  function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+  }
+  function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+  }
+  function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+  }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+}
+function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+}
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+    }
+    function copyText18(inputId) {
+  var copyText18 = document.getElementById(inputId);
+  var inputText = copyText18.value;
+
+  navigator.clipboard.writeText(inputText)
+    .then(function() {
+      alert("Copied!");
+    })
+}
+</script>
+</body>
+</html>

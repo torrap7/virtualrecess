@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        h1 {
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .invisible-textbox {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+        </style>
+    </head>
+    <body>
+        <h1>Tab Cloaks</h1>
+        <input type="text" class="invisible-textbox" value='javascript:(function(){document.title="New Tab";document.getElementsByTagName("TITLE")[0].text="New Tab";var link=document.querySelector("link[rel*=\"icon\]")||document.createElement("link");link.type="image/x-icon";link.rel="shortcut icon";link.href="https://i.ibb.co/1f3J0mx/chrome.png";document.getElementsByTagName("head")[0].appendChild(link);})()' id="myInput1">
+        <button class="button" onclick="copyText('myInput1')"><span>New Tab</span></button>
+        <input type="text" class="invisible-textbox" value='javascript:(function(){document.title="Dashboard";document.getElementsByTagName("TITLE")[0].text="Dashboard";var link=document.querySelector("link[rel*=\"icon\"]")||document.createElement("link");link.type="image/x-icon";link.rel="shortcut icon";link.href="https://i.ibb.co/F7Wsx2X/canvas.png";document.getElementsByTagName("head")[0].appendChild(link);})()' id="myInput2">
+        <button class="button" onclick="copyText('myInput2')"><span>Canvas Dashboard</span></button>
+        <input type="text" class="invisible-textbox" value='javascript:function gcloak(){var link=document.querySelector("link[rel*=\"icon\"]")||document.createElement("link");link.type="image/x-icon";link.rel="shortcut icon";link.href="https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico";document.title="My Drive - Google Drive";console.log(document.title);document.getElementsByTagName("head")[0].appendChild(link);}gcloak();setInterval(gcloak,1000);' id="myInput3">
+        <button class="button" onclick="copyText('myInput3')"><span>Google Drive</span></button>
+        <input type="text" class="invisible-textbox" value='javascript:(function(){var name=prompt("Enter a name for the website:");var image=prompt("Enter the URL for the image you want to use:");document.title=name;var link=document.createElement("link");link.rel="shortcut icon";link.type="image/x-icon";link.href=image;document.getElementsByTagName("head")[0].appendChild(link);})()' id="myInput4">
+        <button class="button" onclick="copyText('myInput4')"><span>Any Website</span></button>
+      </body>
+      <script>
+function copyText(inputId) {
+    var copyText = document.getElementById(inputId);
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+
+    navigator.clipboard.writeText(copyText.value);
+
+    alert("Copied!");
+  }
+  </script>
