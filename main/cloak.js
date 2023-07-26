@@ -15,7 +15,7 @@ function blank() {
       const popup = window.open("about:blank", name, `width=${width},height=${height}`);
   
       if (!popup || popup.closed) {
-        alert("Allow popups and redirects to hide this from showing up in your history.");
+        alert("Allow popups to open this page in an about:blank page.");
       } else {
         const doc = popup.document;
         const iframe = doc.createElement("iframe");
