@@ -4,6 +4,12 @@
     <title>Game Selection</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
+
+body {
+  background: linear-gradient(to bottom right, #ff3333e1, #fff151bd);
+  background-attachment:fixed;
+}
+
         .button {
   appearance: button;
   background-color: #4D4D4D;
@@ -36,6 +42,16 @@
   width: auto;
 }
 
+.hover-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
 .button:after {
   background-clip: padding-box;
   background-color: #808080;
@@ -59,6 +75,10 @@
 .button:hover:not(:disabled) {
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
+}
+
+.hover-button:hover {
+  transform: scale(1.2);
 }
 
 .button:disabled {
@@ -110,8 +130,9 @@
     </script>
 </head>
 <body>
-    <button class="button" onclick="window.location.href='https://east.fishme.me/games/pseudo3dracer';">Pseudo 3D Racer</button>
-    <button class="button" onclick="window.location.href='https://east.fishme.me/games/bigtowertinysquare';">Big Tower Tiny Square</button>
+    <button class="button hover-button" onclick="window.location.href='javascriptracer/index.html';">Pseudo 3D Racer</button>
+    <button class="button hover-button" onclick="window.location.href='bigtowertinysquare/index.html';">Big Tower Tiny Square</button>
+    <button class="button hover-button" onclick="window.location.href='ngon/index.html';">ngon</button>
     <script>
         window.OfflineClientInfo.SetMessageCallback(function(message) {
             console.log('Received message from offline client:', message);
