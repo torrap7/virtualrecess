@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #translator-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #444;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+        #text-boxes {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .text-box {
+            width: 48%;
+        }
+        #customInput, #translationOutput {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+            background-color: #555;
+            color: white;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+        }
+        #translationOutput {
+            background-color: #666;
+        }
+        #toggleButton {
+            background: url('switch.png') no-repeat center center;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            border: 2px solid white;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="translator-container">
+        <h1>Woockblrk Translator</h1>
+        
+        <div id="text-boxes">
+            <div class="text-box">
+                <h2 id="customLanguageLabel">Woockblrk:</h2>
+                <textarea id="customInput" rows="4" cols="30"></textarea>
+            </div>
+            
+            <div class="text-box">
+                <h2 id="outputLabel">English:</h2>
+                <div id="translationOutput"></div>
+            </div>
+        </div>
+        
+        <button id="toggleButton" onclick="toggleLanguage()" title="Switch to English"></button>
+    </div>
+    
+    <script>
+        const translationMapping = {
+            "woock": "block",
+            "peod": "good",
+            "blrk": "work",
+            "ihing": "think",
+            "exs": "yes",
+            "aave": "have",
+            "yeacdly": "exactly",
+            "h": "a",
+            "do": "is",
+            "gorning": "morning",
+            "ising": "doing",
+            "atroge": "stroke",
+            "okry": "very",
+            "amving": "having",
+            "veay": "okay",
+            "iuess": "guess",
+            "S": "I",
+            "soong": "wrong",
+            "iead": "read",
+            "wrng": "song",
+            "aolm": "lmao",
+            "toistening": "listening",
+            "am": "hi",
+            "lo": "to",
+            "mury": "very",
+            "ielive": "believe",
+            "vech": "much",
+            "enon": "soon",
+            "diw": "new",
+            "soough": "enough",
+            "nectionary": "dictionary",
+            "lilking": "talking",
+            "spr": "for",
+            "take": "like",
+            "foeed": "speed",
+            "doat": "do",
+            "li": "of",
+            "wh": "what",
+            "ofght": "light",
+            "yont": "want",
+            "nerds": "words",
+            "djw": "now",
+            "ardoors": "indoors",
+            "dbe": "it",
+            "esak": "the",
+            "doinag": "going",
+            "marhet": "hate",
+            "esake": "those/these/there",
+            "toat": "to",
+            "toaat": "too",
+            "wereamjnk": "screaming",
+            "exsa": "yeah",
+            "gorfekdly": "perfectly",
+            "pold": "need",
+            "hxs": "no",
+            "shgally": "totally",
+            "jl": "he",
+            "jln": "him",
+            "il": "she",
+            "iln": "her",
+            "ilhsa": "they",
+            "ilhsan": "them",
+            "jilkj/s": "you/r",
+            "dozz": "boss",
+            "kyjmrd": "guinea",
+            "bjg": "pig",
+            "kiuzfr": "closed",
+            "zunfjnz": "sometimes",
+            "iantzayv": "landscape",
+            "iantz": "lands",
+            "ayv": "ape",
+            "ayvuy": "cape"
+        };
+
+        let isCustomLanguage = true;
+
+        function toggleLanguage() {
+            isCustomLanguage = !isCustomLanguage;
+            
+            const customLanguageLabel = document.getElementById('customLanguageLabel');
+            const outputLabel = document.getElementById('outputLabel');
+            const toggleButton = document.getElementById('toggleButton');
+            
+            if (isCustomLanguage) {
+                customLanguageLabel.textContent = 'Custom Language:';
+                outputLabel.textContent = 'English:';
+                toggleButton.title = 'Switch to English';
+            } else {
+                customLanguageLabel.textContent = 'English:';
+                outputLabel.textContent = 'Custom Language:';
+                toggleButton.title = 'Switch to Custom Language';
+            }
+            
+            translate();
+        }
+
+        function translate() {
+            const customInput = document.getElementById('customInput');
+            const translationOutput = document.getElementById('translationOutput');
+            
+            const inputText = customInput.value;
+            
+            let translatedText;
+            
+            if (isCustomLanguage) {
+                translatedText = translateToEnglish(inputText);
+            } else {
+                translatedText = translateToCustomLanguage(inputText);
+            }
+            
+            translationOutput.innerText = translatedText;
+        }
+
+        function translateToEnglish(inputText) {
+            const words = inputText.split(' ');
+            const translatedWords = words.map(word => {
+                const punctuation = word.match(/[^a-zA-Z]+/);
+                const baseWord = word.replace(/[^a-zA-Z]+/g, '');
+                const translatedWord = translationMapping[baseWord.toLowerCase()] || baseWord;
+                return punctuation ? translatedWord + punctuation[0] : translatedWord;
+            });
+            return translatedWords.join(' ');
+        }
+
+        function translateToCustomLanguage(inputText) {
+            const words = inputText.split(' ');
+            const reverseMapping = {};
+            for (const key in translationMapping) {
+                if (translationMapping.hasOwnProperty(key)) {
+                    reverseMapping[translationMapping[key]] = key;
+                }
+            }
+            const translatedWords = words.map(word => {
+                const punctuation = word.match(/[^a-zA-Z]+/);
+                const baseWord = word.replace(/[^a-zA-Z]+/g, '');
+                const translatedWord = reverseMapping[baseWord.toLowerCase()] || baseWord;
+                return punctuation ? translatedWord + punctuation[0] : translatedWord;
+            });
+            return translatedWords.join(' ');
+        }
+
+        customInput.addEventListener('input', translate);
+    </script>
+</body>
+</html>
